@@ -1,0 +1,112 @@
+/* * 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-app-region: none;
+}
+
+body {
+    background-color: rgb(146, 135, 120);
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    font-size: 2rem;
+}
+
+.container {
+    height: 80vh;
+    width: 50vh;
+    background-color: black;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.wrapper {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6,1fr);
+    gap: 10px;
+}
+
+.screen {
+  grid-column: 1 / -1;
+  color: white;
+  text-align: end;
+  padding: 0.5rem;
+  font-size: 4rem;
+  overflow: hidden;
+}
+
+.btn {
+  display: grid;
+  place-content: center;
+  background-color: rgb(51, 51, 51);
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: gray;
+}
+
+.light-gray {
+  background-color: rgb(147, 147, 147);
+}
+
+.light-gray:hover {
+  background-color: white;
+  color: black
+}
+
+.orange {
+  background-color: orange;
+}
+
+.orange:hover {
+  background-color: white;
+  color: orange;
+}
+
+ */
+
+button{
+  width: 3em;
+  height: 3em;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 2em;
+  margin: 0.3em;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+.wrapper{
+  background-color: black;
+  border-radius: 1em;
+  padding: 1em;
+}
+
+.orange{
+  background-color: #FF9500;
+  color: white;
+}
+
+.gray{
+  background-color: #505050;
+  color: white;
+}
+.result{
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1em;
+  font-size:3.5em;
+}
+
