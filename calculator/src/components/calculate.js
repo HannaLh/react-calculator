@@ -19,7 +19,7 @@ export default function Calculator() {
         setNum(0);
     }
 
-    const porcentage = () => {
+    const percentage = () => {
         setNum(num / 100);
     }
 
@@ -42,6 +42,7 @@ export default function Calculator() {
             setNum(Math.abs(num));
         }
     }
+
     const operatorHandler = (e) => {
         const operatorInput = e.target.value;
         setOperator(operatorInput);
@@ -72,7 +73,7 @@ export default function Calculator() {
                 <button className="btn light-gray" onClick={exponentiation}>
                     <p>X<sup>2</sup></p>
                 </button>
-                <button className="btn light-gray" onClick={porcentage}>%</button>
+                <button className="btn light-gray" onClick={percentage}>%</button>
                 <button className="btn orange" onClick={operatorHandler} value="/">
                 /
                 </button>

@@ -67,32 +67,32 @@ button {
 }
 
 .btn {
-display: grid;
-place-content: center;
-background-color: rgb(51, 51, 51);
-border-radius: 50%;
-color: white;
-cursor: pointer;
+    display: grid;
+    place-content: center;
+    background-color: rgb(51, 51, 51);
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
 }
 
 .btn:hover {
-background-color: gray;
+    background-color: gray;
 }
 
 .light-gray {
-background-color: rgb(147, 147, 147);
+    background-color: rgb(147, 147, 147);
 }
 
 .light-gray:hover {
-background-color: white;
-color: black
+    background-color: white;
+    color: black;
 }
 
 .orange {
-background-color: orange;
+    background-color: orange;
 }
 
 .orange:hover {
-background-color: white;
-color: orange;
+    background-color: white;
+    color: orange;
 }
