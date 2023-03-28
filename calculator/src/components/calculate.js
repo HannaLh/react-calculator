@@ -6,8 +6,8 @@ export default function Calculator() {
     const [oldnum, setOldNum] = useState(0);
     const [operator, setOperator] = useState();
 
-    function inputNum(e) {
-        var input = e.target.value;
+    const inputNum = (e) => {
+        const input = e.target.value;
         if (num === 0) {
         setNum(input);
         } else {
@@ -15,11 +15,11 @@ export default function Calculator() {
         }
     }
 
-    function clear() {
+    const clear = () => {
         setNum(0);
     }
 
-    function porcentage() {
+    const porcentage = () => {
         setNum(num / 100);
     }
 
@@ -35,21 +35,21 @@ export default function Calculator() {
         setNum(num.slice(0, -1))
     }
 
-    function changeSign() {
+    const changeSign = () => {
         if (num > 0) {
             setNum(-num);
         } else {
             setNum(Math.abs(num));
         }
     }
-    function operatorHandler(e) {
-        var operatorInput = e.target.value;
+    const operatorHandler = (e) => {
+        const operatorInput = e.target.value;
         setOperator(operatorInput);
         setOldNum(num);
         setNum("");
     }
 
-    function calculate() {
+    const calculate = () => {
         if (operator === "/") {
         setNum(parseFloat(oldnum) / parseFloat(num));
         } else if (operator === "X") {
@@ -66,69 +66,71 @@ export default function Calculator() {
 
     return (
         <div className="container">
-        <div className="wrapper">
-            <h1 className="screen">{num}</h1>
-            <button className="btn light-gray" onClick={clear}>C</button>
-            <button className="btn light-gray" onClick={exponentiation}><p>X<sup>2</sup></p></button>
-            <button className="btn light-gray" onClick={porcentage}>%</button>
-            <button className="btn orange" onClick={operatorHandler} value="/">
-            /
-            </button>
-            <button className="btn light-gray" onClick={inputNum} value={7}>
-            7
-            </button>
-            <button className="btn light-gray" onClick={inputNum} value={8}>
-            8
-            </button>
-            <button className="btn light-gray" onClick={inputNum} value={9}>
-            9
-            </button>
-            <button className="btn orange" onClick={operatorHandler} value="X">
-            X
-            </button>
-            <button className="btn light-gray" onClick={inputNum} value={4}>
-            4
-            </button>
-            <button className="btn light-gray" onClick={inputNum} value={5}>
-            5
-            </button>
-            <button className="btn light-gray" onClick={inputNum} value={6}>
-            6
-            </button>
-            <button className="btn orange" onClick={operatorHandler} value="-">
-            -
-            </button>
-            <button className="btn light-gray" onClick={inputNum} value={1}>
-            1
-            </button>
-            <button className="btn light-gray" onClick={inputNum} value={2}>
-            2
-            </button>
-            <button className="btn light-gray" onClick={inputNum} value={3}>
-            3
-            </button>
-            <button className="btn orange" onClick={operatorHandler} value="+">
-            +
-            </button>
-            <button className="btn light-gray" onClick={inputNum}>
-            0
-            </button>
-            <button className="btn light-gray" onClick={inputNum} value={"."}>
-            ,
-            </button>
-            <button className="btn light-gray" onClick={squareRoot} value={"&#8730;"}>
-            &#8730;
-            </button>
-            <button className="btn orange" onClick={calculate}>
-            =
-            </button>
-            <button className="btn backspace" onClick={backspace}>
-            del
-            </button>
-            <button className="btn orange" onClick={changeSign}>
-            -/+
-            </button>
-        </div>
+            <div className="wrapper">
+                <h1 className="screen">{num}</h1>
+                <button className="btn light-gray" onClick={clear}>C</button>
+                <button className="btn light-gray" onClick={exponentiation}>
+                    <p>X<sup>2</sup></p>
+                </button>
+                <button className="btn light-gray" onClick={porcentage}>%</button>
+                <button className="btn orange" onClick={operatorHandler} value="/">
+                /
+                </button>
+                <button className="btn light-gray" onClick={inputNum} value={7}>
+                7
+                </button>
+                <button className="btn light-gray" onClick={inputNum} value={8}>
+                8
+                </button>
+                <button className="btn light-gray" onClick={inputNum} value={9}>
+                9
+                </button>
+                <button className="btn orange" onClick={operatorHandler} value="X">
+                X
+                </button>
+                <button className="btn light-gray" onClick={inputNum} value={4}>
+                4
+                </button>
+                <button className="btn light-gray" onClick={inputNum} value={5}>
+                5
+                </button>
+                <button className="btn light-gray" onClick={inputNum} value={6}>
+                6
+                </button>
+                <button className="btn orange" onClick={operatorHandler} value="-">
+                -
+                </button>
+                <button className="btn light-gray" onClick={inputNum} value={1}>
+                1
+                </button>
+                <button className="btn light-gray" onClick={inputNum} value={2}>
+                2
+                </button>
+                <button className="btn light-gray" onClick={inputNum} value={3}>
+                3
+                </button>
+                <button className="btn orange" onClick={operatorHandler} value="+">
+                +
+                </button>
+                <button className="btn light-gray" onClick={inputNum}>
+                0
+                </button>
+                <button className="btn light-gray" onClick={inputNum} value={"."}>
+                ,
+                </button>
+                <button className="btn light-gray" onClick={squareRoot} value={"&#8730;"}>
+                &#8730;
+                </button>
+                <button className="btn orange" onClick={calculate}>
+                =
+                </button>
+                <button className="btn backspace" onClick={backspace}>
+                del
+                </button>
+                <button className="btn orange" onClick={changeSign}>
+                -/+
+                </button>
+            </div>
         </div>
     );
 }
