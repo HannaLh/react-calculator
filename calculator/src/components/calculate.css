@@ -9,44 +9,44 @@
 
 
 body {
-background-color: rgb(146, 135, 120);
-display: grid;
-place-content: center;
-height: 100vh;
+    background-color: rgb(146, 135, 120);
+    display: grid;
+    place-content: center;
+    height: 100vh;
 }
 
 .container {
-height: 90vh;
-width: 50vh;
-background-color: black;
-border-radius: 1rem;
-padding: 0.5rem;
+    height: 90vh;
+    width: 50vh;
+    background-color: black;
+    border-radius: 1rem;
+    padding: 0.5rem;
 }
 
 .wrapper {
-display: grid;
-height: 100%;
-width: 100%;
-grid-template-columns: repeat(4, 1fr);
-grid-template-rows: repeat(6,1fr);
-gap: 4px;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6,1fr);
+    gap: 4px;
+    padding: 1em;
 }
 
 .screen {
-grid-column: 1 / -1;
-color: white;
-text-align: end;
-padding: 0.5rem;
-font-size: 3rem;
-overflow-x: auto;
-overflow-y: hidden;
+    grid-column: 1 / -1;
+    color: white;
+    text-align: end;
+    padding: 0.5rem;
+    font-size: 3rem;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 ::-webkit-scrollbar {
     width: 2px;
 }
 
-  /* Track */
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
